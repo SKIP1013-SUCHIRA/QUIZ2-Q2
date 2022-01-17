@@ -1,0 +1,33 @@
+package quiz1;
+
+import java.util.Scanner;
+
+public class Quiz2_2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		/*Write a program that prompts the user for a positive integer. 
+		 * The program shall read the input as int; and print the "reverse" of the input integer. For examples:
+		Enter a positive integer: 12345
+		The reverse is: 54321*/
+		
+		int num, reversed = 0;
+	    
+		Scanner a= new Scanner(System.in);
+		
+	    System.out.println("Please enter 5 integer: ");
+	    num=a.nextInt();
+	    
+	    while(num != 0) {
+	    
+	      int digit = num % 10;
+	      reversed = reversed * 10 + digit;
+
+	      num /= 10;
+	    }
+
+	    System.out.println("The reverse order is " + reversed);
+	}
+
+}
